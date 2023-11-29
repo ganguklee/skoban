@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+	font-family: 'Pretendard-Regular', sans-serif;
+}
+.container {
+    max-width:480px;
+    min-height:100vh;
+    background-color: #4F0505;
+    margin:auto;
+    padding-bottom: 80px;
+}
+
+.index_container {
+    max-width:480px;
+    min-height:100vh;
+    background-color: #BF1616;
+    background-image: url('../images/snow.png');
+    background-repeat: no-repeat;
+    background-size : 100% auto;
+    margin:auto;
+    padding-bottom: 120px;
+}
+
+/* .menu_container {
+    max-width:480px;
+    min-height:100vh;
+    background-color: black;
+    margin:auto;
+    padding-bottom: 80px;
+}
+
+.guestbook_container {
+    max-width:480px;
+    min-height:100vh;
+    background-color: black;
+    margin:auto;
+    padding-bottom: 80px;
+} */
+
+.index {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.poster {
+    width : 100%;
+}
+
+p {
+    margin:0;
+}
+.bottom_navbar {
+    max-width : 480px;
+    height : 60px;
+    margin:auto;
+    padding: 10px 40px 10px 40px;
+    background-color: #4F0505;
+
+    position: fixed;
+    left:0;
+    right:0;
+    bottom : 0;
+    box-shadow: 0px -3px 5px -1px rgb(0, 0, 0, 0.2);
+}
+.bottom_navbar > ul {
+    margin: 8px 0 8px 0;
+    padding: 0 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #eef3f6;
+;
+}
+.app_bar{
+    background-color: #4F0505;
+    border-bottom: 1px solid #eef3f6;
+    height: 60px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app_bar_text{
+    margin: auto;
+    color:#eef3f6;
+    font-weight: 400;
+    font-size: 18px;
+}
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+    overflow: auto;
+    white-space: nowrap;
+    
+}
+ul.tabs::-webkit-scrollbar{
+    display: none; 
+}
+ul.tabs li{
+	background: none;
+	color: #eef3f6;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+ul.tabs li.current{
+	background: #4F0505;
+	color: #eef3f6;
+    font-weight: 600;
+    border-bottom : 3px solid red;
+}
+
+.tab-content{
+	display: none;
+	background: #eef3f6;
+
+}
+
+.tab-content.current{
+	display: inherit;
+    
+}
+
+.tab-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4F0505;
+    padding-bottom: 80px;
+}
+
+.member-title{
+    color:#eef3f6;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    display: none;
+}
+.member-photo {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width :320px;
+}
+.member-sub{
+    color: #b4bfc6;
+    font-size :12px;
+    margin-top: 20px;
+}
+.member{
+    margin-top: 5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #eef3f6;
+    font-size :16px;
+    
+}
+
+.card_add_button {
+    padding-top: 12px;
+    width: 340px;
+    margin:auto;
+    display: flex;
+    justify-content: flex-end
+
+}
+.guest-cards {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:12px;
+}
+.guest-card {
+    background-color: white;
+    width: 340px;
+    border-radius: 10px 10px;
+    padding : 20px
+    
+}
+.guest-card > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline ;
+}
+.guest-name {
+    font-weight: bold;
+}
+.guest-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.close-icon{
+    cursor: pointer;
+}
+
+.food-cards {
+    margin : 30px 24px 0px 24px;
+    padding-bottom: 80px;
+}
+
+.dona_photo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width :320px;
+}
+
+.dona_div {
+    color: #eef3f6;
+    font-size :16px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dona_comment {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
