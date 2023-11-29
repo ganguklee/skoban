@@ -72,5 +72,5 @@ def card_delete(id):
             return redirect(url_for('guestbook'))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5005)
+    app.run(host='0.0.0.0', port=5005)
 
