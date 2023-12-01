@@ -24,10 +24,10 @@
             </div>
             <div class="account">
                 <p>더 후원하기</p>
-                <div class="account_number">
+                <div class="account_number" onclick="copyAccountNumber()">
                     <p><span id="accountNumber">7979-82-40941</span> 카카오뱅크 김예지</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-clipboard-minus" viewBox="0 0 16 16" onclick="copyAccountNumber()">
+                        class="bi bi-clipboard-minus" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M5.5 9.5A.5.5 0 0 1 6 9h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
                         <path
                             d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
@@ -98,8 +98,23 @@
 
         const copyAccountNumber = () => {
             const accountNumber = document.getElementById('accountNumber').innerText;
-            copyToClipboard(accountNumber, '사용자');
+            unsecuredCopyToClipboard(accountNumber);
         };
+
+        function unsecuredCopyToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.error('Unable to copy to clipboard', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
     </script>
 </body>
 
