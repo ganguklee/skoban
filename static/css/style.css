@@ -238,3 +238,10 @@ ul.tabs li.current{
     flex-direction: column;
     align-items: center;
 }
+
+.account_number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap : 6px;
+}
